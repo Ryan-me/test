@@ -9,41 +9,36 @@ package string.reverse;
  * @author messr2578
  */
 public class StringReverse {
-    int save;
+    int idk;
     /**
      * @param args the command line arguments
      */
     
     public String reverseString(String word){
-        save++;
-        System.out.println(save);
-        if(word.length()== save){
+        
+        if(idk == word.length()- 2){
             return word;
         }
-        char fst = word.charAt(save);
-        char lst = word.charAt(word.length()- save);
+        int w = word.length() -1;
+        char fst = word.charAt(idk);
+        char lst = word.charAt(w- idk);
         word = word.replace(fst, lst);
+        word = word.replace(lst, fst);
         System.out.println(word);
-        
+        idk++;
         return reverseString(word);
     }
     public String reverseString2(String word){
-        save++;
-        System.out.println(save);
-        if(word.length()== save){
-            return word;
-        }
-        for(int i =0; i< word.length()- 1; i++){
-        char fst = word.charAt(i);
-        char lst = word.charAt(word.length()- i);
-        word = word.replace(fst, lst);
+        int w = word.length();
+        char fst = word.charAt(0);
+        char lst = word.charAt(2);
+        word = word.replace(lst, fst);
         System.out.println(word);
-        }
         return word;
     }
     public static void main(String[] args) {
         // testing it
         StringReverse test = new StringReverse();
-        test.reverseString2("cat");
+        String hey =test.reverseString("cat");
     }
 }
