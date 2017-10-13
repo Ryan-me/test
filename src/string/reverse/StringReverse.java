@@ -20,7 +20,6 @@ public class StringReverse {
         char temp = array[p1];
         array[p1] = array[p2];
         array[p2] = temp;
-
     }
     public String reverseString(String word){
         //base case
